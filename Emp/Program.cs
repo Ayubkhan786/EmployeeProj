@@ -1,18 +1,38 @@
-﻿Console.WriteLine("Welcome to Employee Wage Computation Program");
+﻿
+int isPartTime = 2;
+int isFullTime = 1;
+int totalSalary = 0;
+int ratePerHr = 60;
+int numWorkingDays = 30;
+int empWrkHrs = 0;
 
-int empPresent = 1;
 Random num = new Random();
-int attendance = num.Next(0, 2);
-if (attendance == empPresent)
+int ran = num.Next(0, 3);
+
+if (ran == isPartTime)
 {
-
-
-    Console.WriteLine("Is Present");
+    Console.WriteLine("Is Part Time");
+    empWrkHrs = 8;
 
 
 }
+else if (ran == isFullTime)
+{
+    Console.WriteLine("Is Present");
+    empWrkHrs = 16;
 
+
+}
 else
 {
     Console.WriteLine("Is Absent");
+    empWrkHrs = 0;
+
+
 }
+
+int empWage = (empWrkHrs * ratePerHr);
+int monthlyWage = (empWage * numWorkingDays);
+
+Console.WriteLine("The Daily salary is :" + empWage);
+Console.WriteLine("The Monthly salary is :" + monthlyWage);
