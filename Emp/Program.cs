@@ -1,18 +1,46 @@
-﻿Console.WriteLine("Welcome to Employee Wage Computation Program");
+﻿//Random wage = new Random();
+//int check = wage.Next(0, 4);
 
-int empPresent = 1;
+//switch (check)
+//{
+//    case 0:
+//        Console.WriteLine("absent");
+//        break;
+//    case 1:
+//        Console.WriteLine("Present");
+//        break;
+//    case 2:
+//        Console.WriteLine("PartTime");
+//        break;
+//    default:
+//        Console.WriteLine("Error in values");
+//        break;
+//}
+
+
+int EMP_SALARY = 50;
+int empWrkHrs = 0;
+
 Random num = new Random();
-int attendance = num.Next(0, 2);
-if (attendance == empPresent)
+int ran = num.Next(0, 4);
+
+switch (ran)
 {
-
-
-    Console.WriteLine("Is Present");
-
-
+    case 0:
+        Console.WriteLine("absent");
+        empWrkHrs = 0;
+        break;
+    case 1:
+        Console.WriteLine("Present");
+        empWrkHrs = 16;
+        break;
+    case 2:
+        Console.WriteLine("PartTime");
+        empWrkHrs = 8;
+        break;
+    default:
+        Console.WriteLine("Error in values");
+        break;
 }
-
-else
-{
-    Console.WriteLine("Is Absent");
-}
+int empWage = (empWrkHrs * EMP_SALARY);
+Console.WriteLine("The total salary is :" + empWage);
